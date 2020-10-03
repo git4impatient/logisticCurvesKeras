@@ -13,7 +13,7 @@
 from __future__ import print_function
 import math
 import random
-maxrows=10000000
+maxrows=1000
 # create a reference number for the curve
 maxrows=maxrows+10000000
 for numrows in range (10000000, maxrows):
