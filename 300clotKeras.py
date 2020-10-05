@@ -50,7 +50,7 @@ myspark.sql("SET spark.sql.parquet.binaryAsString=true")
 
 iotdf=myspark.sql('select * from curvestage')
 # print number of rows and type of object
-iotdf.cache()
+#iotdf.cache()
 print ( iotdf.count() )
 print  ( iotdf )
 iotdf.show(5)

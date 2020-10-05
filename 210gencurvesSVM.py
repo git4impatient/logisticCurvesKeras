@@ -13,11 +13,11 @@
 from __future__ import print_function
 import math
 import random
-maxrows=100000
+maxrows=10000000
 # create a reference number for the curve
 maxrows=maxrows+10000000
 for numrows in range (10000000, maxrows):
-  print (numrows+1, end='|')
+  #  no id number in the svm format print (numrows+1, end='|')
   L=abs(random.gauss(.7,.3 ))
   x0=random.gauss(0,1 )
   #xlist=[]
@@ -26,14 +26,6 @@ for numrows in range (10000000, maxrows):
   k=random.gauss(1,.5 )
   x=-6
   label=0  # 0 norm
-  fast=0
-  while ( x < 6 ):
-    y=L/(1+math.exp(-k*(x-x0)))
-#    ylist.append(y)
-#    xlist.append(dt)
-    dt=dt+1
-    print (y, end='|')
-    x=x+.1
   if ( L < .7 and x0 < -.3 ):
       label=1
   if ( L < .7 and x0 > -.3 and x0 < .3):
@@ -46,8 +38,17 @@ for numrows in range (10000000, maxrows):
       label=5
   if ( L>.7 and x0>.3 ):
       label=6
+  print (label,end=' ')
+
+  while ( x < 6 ):
+    y=L/(1+math.exp(-k*(x-x0)))
+#    ylist.append(y)
+#    xlist.append(dt)
+    dt=dt+1
+    print (str(dt)+":"+str('%f' % y), end=' ')
+    x=x+.1
+  print("")
   
-  print (label)
 #  print ("")
 #  print (xlist)
 #  print(ylist)

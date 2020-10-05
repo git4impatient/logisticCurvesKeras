@@ -131,7 +131,7 @@ label int
  ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
 
 STORED AS TEXTFILE          
-LOCATION 's3a://cdp-sandbox-default-se/datalake/marty/clotcuves/'
+LOCATION 's3a://cdp-sandbox-default-se/datalake/marty/clotcurves/'
 TBLPROPERTIES ('transactional'='false')
 
 ;
