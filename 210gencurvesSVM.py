@@ -41,7 +41,7 @@ for numrows in range (10000000, maxrows):
   print (label,end=' ')
 
   while ( x < 6 ):
-    y=L/(1+math.exp(-k*(x-x0)))
+    y=L/(1+math.exp(-k*(x-x0)))+ abs((math.sin(x*10))/60)
 #    ylist.append(y)
 #    xlist.append(dt)
     dt=dt+1
